@@ -9,7 +9,7 @@ if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 
-$query = "SELECT * FROM phone";
+$query = "SELECT * FROM phones";
 $result = mysqli_query($link, $query) or die(mysqli_error($link));
 $tableArray = array();
 $counter = 0;
