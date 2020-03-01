@@ -146,7 +146,7 @@ map.mapTypes.set('gta_satellite', satellite);
 map.mapTypes.set('gta_roadmap', roadmap);
 map.mapTypes.set('gta_atlas', atlas);
 // sets default 'startup' map
-map.setMapTypeId('gta_satellite');
+map.setMapTypeId('gta_roadmap');
 
 var overlay = new google.maps.OverlayView();
 overlay.draw = function() {};
