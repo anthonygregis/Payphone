@@ -43,7 +43,7 @@ span.loading {
 	text-align: center;
 	font: 300 italic 72px/400px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
 }
-img[src="http://maps.gstatic.com/mapfiles/api-3/images/google4.png"], a[href^="http://maps.google.com/maps"]{
+img[src="https://maps.gstatic.com/mapfiles/api-3/images/google4.png"], a[href^="https://maps.google.com/maps"]{
 	width:66px;
   	height:26px;
   	box-sizing:border-box;
@@ -59,7 +59,7 @@ img[src="http://maps.gstatic.com/mapfiles/api-3/images/google4.png"], a[href^="h
 
 
 <div id="map"><span class="loading">loading tiles...</span></div>
-<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDqzIU56MYlJho5aHxb4rQqgydfY53YcPA&sensor=false"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqzIU56MYlJho5aHxb4rQqgydfY53YcPA&sensor=false"></script>
 <script>
 var repeatOnXAxis = false; // Do we need to repeat the image on the X-axis? Most likely you'll want to set this to false
 function getNormalizedCoord(coord, zoom) {
