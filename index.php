@@ -44,12 +44,7 @@ span.loading {
 	font: 300 italic 72px/400px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
 }
 img[src="https://maps.gstatic.com/mapfiles/api-3/images/google4.png"], a[href^="https://maps.google.com/maps"]{
-	width:66px;
-  	height:26px;
-  	box-sizing:border-box;
-  	padding-right: 126px !important;
-  	/*width of the image*/
-  	background: url(lf-small.png) left top no-repeat;
+	display: none !important;
 }
 .gmnoprint a, .gmnoprint span {
     display:none;
