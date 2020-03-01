@@ -225,5 +225,7 @@ function showMarkers() {
 		<?php $i = 1; foreach($tableArray as $row) {?>
 			addMarker(<?php echo $row['xcoord'] ?>,<?php echo $row['ycoord'] ?>, "static", 'Payphone', 'yellow-dot', true);
 		<?php } ?>
+		document.getElementById("map").style.height="100%";
+		document.getElementById("map").style.width="100%";
 	});
 </script>
