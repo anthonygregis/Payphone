@@ -1,3 +1,28 @@
+<?php 
+require_once "config.php";
+
+/* Attempt to connect to MySQL database */
+$link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+ 
+// Check connection
+if($link === false){
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+}
+
+$query = "SELECT * FROM phone";
+$result = mysqli_query($link, $query) or die(mysqli_error($link));
+$tableArray = array();
+$counter = 0;
+while ($row = mysqli_fetch_array($result))
+{
+	 $tableArray[$counter]['xcoord'] = $row['xcoord'];
+     $tableArray[$counter]['ycoord'] = $row['ycoord'];
+     $counter++;
+}
+
+//Close Connection
+mysqli_close($link);
+?>
 <style>	
 body, html {
 	padding:0px;
@@ -200,10 +225,10 @@ function showMarkers() {
             });
 		});
 	} 
-	 
+	
 	google.maps.event.addListenerOnce(map, 'idle', function(){
-		addMarker(8.70,540.32, "static", 'Franklins Front Door<br><b>Actual In-Game Coordinates', 'yellow-dot', true);
-		addMarker(-818.96,177.56, "static", 'Michaels Front Door<br><b>Actual In-Game Coordinates', 'yellow-dot', true);
-		addMarker(1937.32,3889.64, "static", 'trevors old shack<br><b>Actual In-Game Coordinates', 'yellow-dot', true);
+		<?php $i = 1; foreach($tableArray as $row) {?>
+			addMarker(<?php echo $row['xcoord'] ?>,<?php echo $row['ycoord'] ?>, "static", 'Payphone', 'yellow-dot', true);
+		<?php } ?>
 	});
 </script>
