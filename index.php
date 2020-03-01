@@ -28,7 +28,7 @@ body, html {
 	padding:0px;
 	margin:0px;
 	
-	background: url(bg.jpg) 50% 50% / cover no-repeat fixed rgb(0, 0, 0);
+	background-color: black;
 }
 
 #map {
